@@ -100,7 +100,8 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': os.environ['DATABASE'],
         'CLIENT': {
-            'host': f"mongodb://${os.environ['DB_HOST']}:${int(os.environ['DB_PORT'])}",
+            'host': os.environ['DB_HOST'],
+            'port': int(os.environ['DB_PORT']),
         }
     }
 }
