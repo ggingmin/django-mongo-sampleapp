@@ -1,0 +1,12 @@
+<h1>University Students List</h1>
+{% for student in student_list %}
+<ul>
+    <li>학번: {{ student.student_num }}</li>
+    <li>이름: {{ student.name }}</li>
+    <li>단과대학: {{ student.college }}</li>
+    <li>학과: {{ student.major }}</li>
+    <li>상태: {{ student.student_type }}</li>
+    <li>졸업여부: {{ student.graduated }}</li>
+    <li>입학일자: {{ student.entrance_date }}</li>
+</ul>
+{% endfor %}
