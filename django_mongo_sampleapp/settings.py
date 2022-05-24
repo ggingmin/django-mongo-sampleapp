@@ -98,9 +98,9 @@ WSGI_APPLICATION = 'django_mongo_sampleapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'testdb',
-        'HOST': '127.0.0.1',
-        'PORT': 27017,
+        'NAME': os.environ['DATABASE'],
+        'HOST': os.environ['DB_HOST'],
+        'PORT': os.environ['DB_PORT'],
     }
 }
 
